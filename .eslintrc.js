@@ -12,18 +12,18 @@ module.exports = {
     sourceType: 'module' // 使用 ES 模块
   },
   extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended', 'plugin:vue/vue3-essential'],
-  overrides: [
-    {
-      env: {
-        node: true
-      },
-      files: ['.eslintrc.{js,cjs}'],
-      parserOptions: {
-        sourceType: 'script'
-      }
-    }
-  ],
-  plugins: ['@typescript-eslint', 'vue'],
+  // overrides: [
+  //   {
+  //     env: {
+  //       node: true
+  //     },
+  //     files: ['.eslintrc.{js,cjs}'],
+  //     parserOptions: {
+  //       sourceType: 'script'
+  //     }
+  //   }
+  // ],
+  // plugins: ['@typescript-eslint', 'vue'],
   rules: {
     'vue/script-setup-uses-vars': 'error', // 强制在 <script setup> 中声明的变量必须使用
     '@typescript-eslint/ban-ts-ignore': 'off', // 允许使用 @ts-ignore 注释
