@@ -11,7 +11,7 @@ module.exports = {
     ecmaVersion: 2020, // 支持的 ECMAScript 版本
     sourceType: 'module' // 使用 ES 模块
   },
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended', 'plugin:vue/vue3-essential'],
+  extends: ['plugin:vue/vue3-recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   // overrides: [
   //   {
   //     env: {

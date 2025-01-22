@@ -9,5 +9,5 @@ module.exports = {
   endOfLine: 'auto', // 自动检测并维护文件的换行符格式（Windows 用 CRLF，Unix 用 LF）
   bracketSameLine: true, // 将 HTML 标签的闭合括号放在最后一行的末尾
   jsxBracketSameLine: true, // 将 JSX 标签的闭合括号放在最后一行的末尾
-  arrowParens: 'avoid', // 当箭头函数只有一个参数时，避免使用括号
+  arrowParens: 'avoid' // 当箭头函数只有一个参数时，避免使用括号
 };
