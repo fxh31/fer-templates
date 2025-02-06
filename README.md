@@ -1,5 +1,12 @@
-# Vue 3 + TypeScript + Vite
+# 模板须知
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Axios
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+### 统一 restful 响应格式
+```ts
+interface Result<T = any> {
+  code: number;
+  msg: string;
+  data?: T;
+}
+```
