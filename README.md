@@ -37,3 +37,9 @@ pnpm build
 ```sh
 pnpm lint
 ```
+
+## 项目管理
+
+- cz-git + czg
+
+> czg 中包含了 cz-git 的核心功能。
