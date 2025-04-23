@@ -4,11 +4,18 @@ import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 
 import App from './App.vue';
-import router from './router';
+import { router, setupRouter } from '@/router';
+// import { registerGlobComp } from '@/components/registerGlobComp';
+async function bootstrap() {
+  const app = createApp(App);
 
-const app = createApp(App);
+  app.use(createPinia());
 
-app.use(createPinia());
-app.use(router);
+  // Configure routing
+  // 配置路由
+  setupRouter(app);
 
-app.mount('#app');
+  app.mount('#app');
+}
+
+bootstrap();
