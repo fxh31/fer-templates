@@ -1,8 +1,8 @@
 import './assets/main.css';
 
 import { createApp } from 'vue';
-
 import App from './App.vue';
+import { initAppConfigStore } from '@/logics/initAppConfig';
 import { router, setupRouter } from '@/router';
 import { setupRouterGuard } from '@/router/guard';
 import { setupStore } from '@/stores';
@@ -13,6 +13,10 @@ async function bootstrap() {
   // Configure store
   // 配置 store
   setupStore(app);
+
+  // Initialize internal system configuration
+  // 初始化内部系统配置
+  initAppConfigStore();
 
   // Configure routing
   // 配置路由
