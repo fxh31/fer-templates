@@ -3,9 +3,11 @@ import './assets/main.css';
 import { createApp } from 'vue';
 import App from './App.vue';
 import { initAppConfigStore } from '@/logics/initAppConfig';
+import { setupErrorHandle } from '@/logics/error-handle';
 import { router, setupRouter } from '@/router';
 import { setupRouterGuard } from '@/router/guard';
 import { setupStore } from '@/stores';
+import { setupGlobDirectives } from '@/directives';
 import { registerGlobComp } from '@/components/registerGlobComp';
 async function bootstrap() {
   const app = createApp(App);
@@ -29,6 +31,14 @@ async function bootstrap() {
   // Router Guard
   // 路由守卫
   setupRouterGuard(router);
+
+  // Register global directive
+  // 注册全局指令
+  setupGlobDirectives(app);
+
+  // Configure global error handling
+  // 配置全局错误处理
+  setupErrorHandle(app);
 
   app.mount('#app');
 }
