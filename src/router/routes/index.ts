@@ -1,6 +1,6 @@
 import type { AppRouteRecordRaw } from '@/router/types';
 
-import { COMMON_ROUTE } from '@/router/routes/basic';
+import { PAGE_NOT_FOUND_ROUTE, COMMON_ROUTE } from '@/router/routes/basic';
 
 import { PageEnum } from '@/enums/pageEnum';
 
@@ -22,4 +22,4 @@ export const LoginRoute: AppRouteRecordRaw = {
 };
 
 // 路由白名单
-export const basicRoutes = [RootRoute, LoginRoute, COMMON_ROUTE];
+export const basicRoutes = [RootRoute, LoginRoute, PAGE_NOT_FOUND_ROUTE, COMMON_ROUTE];
