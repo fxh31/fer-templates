@@ -1,2 +1,38 @@
 import type { App } from 'vue';
-export function registerGlobComp(app: App) {}
+import {
+  Input,
+  InputNumber,
+  Layout,
+  Form,
+  Switch,
+  Dropdown,
+  Menu,
+  Select,
+  Table,
+  Checkbox,
+  Tabs,
+  Collapse,
+  Card,
+  Tooltip,
+  Row,
+  Col,
+  Popconfirm,
+  Divider,
+  Alert,
+  AutoComplete,
+  Cascader,
+  Rate,
+  Slider,
+  Avatar,
+  Tag,
+  Space,
+  Steps,
+  Popover,
+  Radio,
+  Progress,
+  Image,
+  Upload,
+} from 'ant-design-vue';
+export function registerGlobComp(app: App) {
+  app.use(Input);
+}
