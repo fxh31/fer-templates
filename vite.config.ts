@@ -4,6 +4,7 @@ import { fileURLToPath, URL } from 'node:url';
 import { loadEnv } from 'vite';
 import { resolve } from 'path';
 import { wrapperEnv } from './build/utils';
+import { createProxy } from './build/vite/proxy';
 import { createVitePlugins } from './build/vite/plugin';
 function pathResolve(dir: string) {
   return resolve(process.cwd(), '.', dir);
@@ -27,6 +28,8 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     server: {
       // host: true,
       // https: true,
+      proxy: createProxy(VITE_PROXY),
+      open: false,
     },
     build: {
       minify: 'terser',
