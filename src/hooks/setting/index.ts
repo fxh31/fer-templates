@@ -17,6 +17,8 @@ export const useGlobSetting = (): Readonly<GlobConfig> => {
   const glob: Readonly<GlobConfig> = {
     apiUrl: VITE_GLOB_API_URL,
     urlPrefix: VITE_GLOB_API_URL_PREFIX,
+    cipherKey: 'EY8WtPvaM8GGwQzn', // 加密key
   };
+
   return glob as Readonly<GlobConfig>;
 };

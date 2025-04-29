@@ -16,7 +16,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
   const env = loadEnv(mode, root);
 
   const viteEnv = wrapperEnv(env);
-  const { VITE_PORT, VITE_DROP_CONSOLE } = viteEnv;
+  const { VITE_PORT, VITE_DROP_CONSOLE, VITE_PROXY } = viteEnv;
   const isBuild = command === 'build';
 
   return {
