@@ -1,3 +1,7 @@
+import type { GlobEnvConfig } from '#/config';
+
+import { warn } from '@/utils/log';
+import pkg from '../../package.json';
 import { getConfigFileName } from '../../build/getConfigFileName';
 export function getAppEnvConfig() {
   const ENV_NAME = getConfigFileName(import.meta.env);
@@ -23,6 +27,20 @@ export function getAppEnvConfig() {
   };
 }
 
+export function getCommonStoragePrefix() {
+  const { VITE_GLOB_APP_SHORT_NAME } = getAppEnvConfig();
+  return `${VITE_GLOB_APP_SHORT_NAME}__${getEnv()}`.toUpperCase();
+}
+// 根据版本号生成缓存的 key - Generate cache key according to version
+export function getStorageShortName() {
+  return `${getCommonStoragePrefix()}${`__${pkg.version}`}__`.toUpperCase();
+}
+
 export function isDevMode(): boolean {
   return import.meta.env.DEV;
+}
+
+// 获取环境变量 - Get environment variables
+export function getEnv(): string {
+  return import.meta.env.MODE;
 }
