@@ -1,5 +1,5 @@
-import http from 'node:http';
-import url from 'node:url';
+const http = require('node:http');
+const url = require('node:url');
 
 const server = http.createServer((req, res) => {
   const { pathname } = url.parse(req.url);
@@ -10,8 +10,15 @@ const server = http.createServer((req, res) => {
   } else if (pathname === '/api/users') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
   } else if (pathname === '/api/oauth/Login') {
-  
-    res.end('');
+    res.end(
+      JSON.stringify({
+        msg: 'hello',
+        code: 200,
+        data: {
+          name: 'ferhannah',
+        },
+      }),
+    );
   } else {
   }
 });
