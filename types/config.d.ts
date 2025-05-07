@@ -1,3 +1,14 @@
+export type LocaleType = 'zh_CN' | 'zh_TW' | 'en_US' | 'ru' | 'ja' | 'ko';
+export interface LocaleSetting {
+  showPicker: boolean;
+  // Current language
+  locale: LocaleType;
+  // default fallback language
+  fallback: LocaleType;
+  // available Locales
+  availableLocales: LocaleType[];
+}
+
 export interface ProjectConfig {}
 
 export interface GlobConfig {
