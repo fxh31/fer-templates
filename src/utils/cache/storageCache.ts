@@ -86,6 +86,7 @@ class WebStorage {
       const decVal = this.hasEncrypt ? this.encryption.decryptByAES(val) : val;
       const data = JSON.parse(decVal);
       const { value, expire } = data;
+      // 没有设置 expire 则默认不过期
       if (isNullOrUnDef(expire) || expire >= new Date().getTime()) {
         return value;
       }
