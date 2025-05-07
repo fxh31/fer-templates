@@ -61,7 +61,7 @@ class WebStorage {
    * @param {*} expire Expiration time in seconds
    * @memberof Cache
    */
-  set(key: string, value: any, expire?: number | null = timeout) {
+  set(key: string, value: any, expire?: number | null = this.timeout) {
     const stringData = JSON.stringify({
       value,
       time: Date.now(),
