@@ -36,5 +36,5 @@ import {
   Upload,
 } from 'ant-design-vue';
 export function registerGlobComp(app: App) {
-  app.use(Input).use(Button);
+  app.use(Input).use(Button).use(Tooltip);
 }
