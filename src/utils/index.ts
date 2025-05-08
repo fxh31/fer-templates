@@ -68,3 +68,12 @@ export const withInstall = <T extends CustomComponent>(component: T, alias?: str
   };
   return component as WithInstall<T>;
 };
+
+/**
+ * 获取组件挂载的父节点
+ * Set ui mount node
+ * @description 可以设置弹出框渲染父级容器的外面（类 Teleport）
+ */
+export function getPopupContainer(node?: HTMLElement): HTMLElement {
+  return (node?.parentNode as HTMLElement) ?? document.body;
+}
