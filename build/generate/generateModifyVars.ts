@@ -13,5 +13,6 @@ export function generateModifyVars() {
     'error-color': '#ED6F6F', //  False color
     'warning-color': '#EFBD47', //   Warning color
     'btn-info-color': '#909399',
+    'text-color-secondary': 'rgba(0, 0, 0, 0.45)',
   };
 }
