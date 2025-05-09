@@ -54,6 +54,7 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@rys-fe/vite-plugin-theme": "^0.8.6",
     "@tsconfig/node22": "^22.0.1",
     "@types/crypto-js": "^4.2.2",
     "@types/node": "^22.14.0",
