@@ -1,0 +1,22 @@
+.ant-modal.fer-list-modal {
+  .ant-modal-body {
+    height: 70vh;
+    overflow: hidden;
+    & > .scrollbar {
+      padding: 0;
+      & > .scrollbar__bar {
+        display: none !important;
+      }
+      .scrollbar__wrap {
+        .scrollbar__view {
+          height: 100%;
+          overflow: hidden;
+          & > div {
+            height: 100% !important;
+            max-height: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}
