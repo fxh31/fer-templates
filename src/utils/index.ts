@@ -57,6 +57,10 @@ export type WithInstall<T> = T & {
 } & EventShim;
 
 export type CustomComponent = Component & { displayName?: string };
+/**
+ * 包装函数（添加 install 方法），让组件可以通过 app.use() 全局安装，不需要则按需引入即可
+ * The wrapper function (adding the install method) enables components to be globally installed through app.use(). If not needed, they can be imported as required
+ */
 export const withInstall = <T extends CustomComponent>(component: T, alias?: string) => {
   component.install = (app: App) => {
     const compName = component.name || component.displayName;
