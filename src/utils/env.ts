@@ -39,6 +39,9 @@ export function getStorageShortName() {
 export function isDevMode(): boolean {
   return import.meta.env.DEV;
 }
+export function isProdMode(): boolean {
+  return import.meta.env.PROD;
+}
 
 // 获取环境变量 - Get environment variables
 export function getEnv(): string {
