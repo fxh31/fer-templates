@@ -33,7 +33,6 @@ export function useI18n(namespace?: string): { t: I18nGlobalTranslation } {
   }
 
   const { t, ...methods } = i18n.global;
-  console.log('i18n', i18n);
 
   const tFn: I18nGlobalTranslation = (key: string, ...arg: any[]) => {
     if (!key) return '';
