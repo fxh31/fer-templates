@@ -18,3 +18,25 @@ export function getSlot(slots: Slots, slot = 'default', data?: any) {
   if (!slotFn) return null;
   return slotFn(data);
 }
+
+/**
+ * 对传入的插槽进行封装，返回一个插槽对象
+ * Return a slot object
+ * @example 
+ * {
+      default: (data?) =>  getSlot()：VNode,
+      header: (data?) => VNode,
+      footer: (data?) => VNode
+    }
+ */
+export function extendSlots(slots: Slots, excludeKeys: string[] = []) {
+  const slotKeys = Object.keys(slots);
+  const ret: any = {};
+  slotKeys.map(key => {
+    if (excludeKeys.includes(key)) {
+      return null;
+    }
+    ret[key] = (data?: any) => getSlot(slots, key, data);
+  });
+  return ret;
+}
