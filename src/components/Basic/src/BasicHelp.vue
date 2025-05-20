@@ -54,8 +54,9 @@
             placement: props.placement as 'right',
             getPopupContainer: () => getPopupContainer(),
           },
+
           {
-            default: () => [getSlot(slots) || h(QuestionCircleFilled)],
+            default: () => [h('span', { class: prefixCls }, [getSlot(slots) || h(QuestionCircleFilled)])],
           },
         );
       };
