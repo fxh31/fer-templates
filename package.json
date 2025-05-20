@@ -52,7 +52,8 @@
     "pinia": "^3.0.1",
     "vue": "^3.5.13",
     "vue-i18n": "^11.1.3",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.5.0",
+    "vue-types": "^6.0.0"
   },
   "devDependencies": {
     "@rys-fe/vite-plugin-theme": "^0.8.6",
