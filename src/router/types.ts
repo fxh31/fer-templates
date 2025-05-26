@@ -13,3 +13,33 @@ export interface AppRouteRecordRaw extends Omit<RouteRecordRaw, 'meta'> {
   props?: Recordable;
   fullPath?: string;
 }
+
+export interface MenuTag {
+  type?: 'primary' | 'error' | 'warn' | 'success';
+  content?: string;
+  dot?: boolean;
+}
+
+export interface Menu {
+  id: string;
+  enCode: string;
+  fullName: string;
+  icon: string;
+  linkTarget: string;
+  parentId: string;
+  hasChildren: boolean;
+  propertyJson: string;
+  sortCode: number;
+  type: number;
+  urlAddress: string;
+  path: string;
+  children?: Nullable<Menu[]>;
+  meta?: RouteMeta;
+}
+
+export interface MenuModule {
+  orderNo?: number;
+  menu: Menu;
+}
+
+export type AppRouteModule = AppRouteRecordRaw;

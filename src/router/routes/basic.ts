@@ -21,6 +21,30 @@ export const PAGE_NOT_FOUND_ROUTE: AppRouteRecordRaw = {
   ],
 };
 
+export const ERROR_LOG_ROUTE: AppRouteRecordRaw = {
+  path: '/error-log',
+  name: 'ErrorLog',
+  component: LAYOUT,
+  redirect: '/error-log/list',
+  meta: {
+    title: 'ErrorLog',
+    hideBreadcrumb: true,
+    hideChildrenInMenu: true,
+  },
+  children: [
+    {
+      path: 'list',
+      name: 'ErrorLogList',
+      component: () => import('@/views/basic/error-log/index.vue'),
+      meta: {
+        title: '错误日志列表',
+        hideBreadcrumb: true,
+        currentActiveMenu: '/error-log',
+      },
+    },
+  ],
+};
+
 export const COMMON_ROUTE: AppRouteRecordRaw = {
   path: '/common-route',
   name: 'commonRoute',
