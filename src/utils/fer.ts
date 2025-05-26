@@ -14,3 +14,12 @@ export function getDateFormat(format) {
   };
   return formatObj[format] || 'YYYY-MM-DD HH:mm:ss';
 }
+
+export function getferfAppId() {
+  let appId = '';
+  if (window.location.pathname?.startsWith('/FER_APP_')) {
+    const list = window.location.pathname.split('/');
+    appId = list[1];
+  }
+  return appId;
+}
