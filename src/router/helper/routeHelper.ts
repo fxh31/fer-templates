@@ -1,12 +1,12 @@
 import type { Router, RouteRecordNormalized } from 'vue-router';
 import type { AppRouteModule, AppRouteRecordRaw } from '@/router/types';
+import type { BackMenu } from '@/api/basic/model/userModel';
 
 import { defineComponent, defineAsyncComponent, h } from 'vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
 import { cloneDeep, omit } from 'lodash-es';
 
 import { PageEnum } from '@/enums/pageEnum';
-import { BackMenu } from '@/api/basic/model/userModel';
 import { useGlobSetting } from '@/hooks/setting';
 import { getToken } from '@/utils/auth';
 import { getParentLayout, LAYOUT, EXCEPTION_COMPONENT } from '@/router/constant';
