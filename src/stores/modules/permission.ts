@@ -2,7 +2,7 @@ import type { AppRouteRecordRaw, Menu } from '@/router/types';
 
 import { defineStore } from 'pinia';
 import { toRaw } from 'vue';
-import { store } from '@/store';
+import { store } from '@/stores';
 import { transformObjToRoute, flatMultiLevelRoutes } from '@/router/helper/routeHelper';
 import { ERROR_LOG_ROUTE, PAGE_NOT_FOUND_ROUTE } from '@/router/routes/basic';
 import { useUserStore } from './user';
