@@ -16,7 +16,7 @@ getRouteNames(basicRoutes);
 
 // 取路径上的应用识别码的作为基础路由
 let VITE_PUBLIC_PATH = import.meta.env.VITE_PUBLIC_PATH;
-const appId = getJnpfAppId();
+const appId = getferfAppId();
 if (appId) VITE_PUBLIC_PATH = '/' + appId;
 
 export const router = createRouter({
