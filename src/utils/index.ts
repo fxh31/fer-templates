@@ -42,6 +42,20 @@ export function deepMerge<T extends object | null | undefined, U extends object 
 }
 
 /**
+ * 获取动态属性（解构对象中属性的 ref）
+ * Dynamic use hook props
+ */
+export function getDynamicProps<T extends Record<string, unknown>, U>(props: T): Partial<U> {
+  const ret: Recordable = {};
+
+  Object.keys(props).map(key => {
+    ret[key] = unref((props as Recordable)[key]);
+  });
+
+  return ret as Partial<U>;
+}
+
+/**
  * vue component global registration
  */
 // https://github.com/vant-ui/vant/issues/8302
