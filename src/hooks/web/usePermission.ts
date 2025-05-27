@@ -13,7 +13,7 @@ export function usePermission() {
   const userStore = useUserStore();
   const permissionStore = usePermissionStore();
 
-  const permissionList = [];
+  const permissionList = userStore.getPermissionList;
   const route = useRoute();
 
   /**
