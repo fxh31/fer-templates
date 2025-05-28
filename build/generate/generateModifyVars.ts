@@ -39,6 +39,7 @@ export function generateModifyVars() {
     'btn-info-color': '#909399',
     'text-color-secondary': 'rgba(0, 0, 0, 0.45)',
     'text-color': '#c9d1d9', // todo: fix text-color
+    'app-main-background': '#ebeef5',
     // ---
     'component-background': '#151515',
   };
