@@ -6,7 +6,7 @@
   import { Divider } from 'ant-design-vue';
   import { computed, unref, useAttrs } from 'vue';
 
-  defineOptions({ name: 'ferDivider', inheritAttrs: false });
+  defineOptions({ name: 'FerDivider', inheritAttrs: false });
   defineProps({
     content: {
       type: String,

@@ -25,7 +25,7 @@
   import { useTextMask } from '@/hooks/web/useTextMask';
 
   const InputPassword = Input.Password;
-  defineOptions({ name: 'ferInput', inheritAttrs: false });
+  defineOptions({ name: 'FerInput', inheritAttrs: false });
   const props = defineProps(inputProps);
   const emit = defineEmits(['update:value', 'change']);
   const attrs = useAttrs({ excludeDefaultKeys: false });
