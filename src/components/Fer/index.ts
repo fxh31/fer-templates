@@ -7,6 +7,7 @@ import { FerAlert } from './Alert';
 import { FerDivider } from './Divider';
 import { FerCheckbox, FerCheckboxSingle } from './Checkbox';
 import { FerCron } from './Cron';
+import { FerEmpty } from './Empty';
 
 const FerInputPassword = Input.Password;
 FerInputPassword.name = 'FerInputPassword';
@@ -36,4 +37,5 @@ export {
   FerGroupTitle,
   FerMonthPicker,
   FerWeekPicker,
+  FerEmpty,
 };
