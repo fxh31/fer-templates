@@ -37,5 +37,5 @@ import {
 } from 'ant-design-vue';
 
 export function registerGlobComp(app: App) {
-  app.use(Input).use(Button).use(Tooltip).use(Radio).use(Checkbox).use(Row).use(Col).use(Tabs).use(Divider).use(Select).use(Tooltip);
+  app.use(Input).use(Form).use(Button).use(Tooltip).use(Radio).use(Checkbox).use(Row).use(Col).use(Tabs).use(Divider).use(Select).use(Tooltip);
 }
