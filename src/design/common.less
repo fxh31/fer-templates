@@ -172,3 +172,45 @@
     }
   }
 }
+
+.field-table-box {
+  border: 1px solid @border-color-base;
+  border-radius: 4px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  overflow: hidden;
+  .title {
+    height: 38px;
+    line-height: 38px;
+    display: flex;
+    color: @text-color-label;
+    font-size: 14px;
+    padding: 0 10px;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .table-actions {
+    flex-shrink: 0;
+    border-top: 1px dashed @border-color-base;
+    text-align: center;
+  }
+  .list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .icon-ym-btn-edit {
+      color: @primary-color;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .icon-ym-delete {
+      color: @error-color;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  }
+}

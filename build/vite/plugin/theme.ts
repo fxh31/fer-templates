@@ -24,6 +24,9 @@ export function configThemePlugin(isBuild: boolean): PluginOption[] {
       darkModifyVars: {
         ...generateModifyVars(),
         // todo：暗色模式处理样式
+        'text-color-label': '#606266',
+        'border-color-base': '#303030',
+        'border-color-base1': '#303030',
       },
     }),
   ];
