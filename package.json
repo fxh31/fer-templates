@@ -62,6 +62,7 @@
     "vue-types": "^6.0.0"
   },
   "devDependencies": {
+    "@iconify/json": "^2.2.342",
     "@purge-icons/generated": "^0.10.0",
     "@rys-fe/vite-plugin-theme": "^0.8.6",
     "@tsconfig/node22": "^22.0.1",
