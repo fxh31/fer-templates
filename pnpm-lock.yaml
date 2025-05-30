@@ -50,6 +50,9 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0(vue@3.5.13(typescript@5.8.3))
     devDependencies:
+      '@iconify/json':
+        specifier: ^2.2.342
+        version: 2.2.342
       '@purge-icons/generated':
         specifier: ^0.10.0
         version: 0.10.0
@@ -560,6 +563,9 @@ packages:
   '@iconify/iconify@3.1.1':
     resolution: { integrity: sha512-1nemfyD/OJzh9ALepH7YfuuP8BdEB24Skhd8DXWh0hzcOxImbb1ZizSZkpCzAwSZSGcJFmscIBaBQu+yLyWaxQ== }
     deprecated: no longer maintained, switch to modern iconify-icon web component
+
+  '@iconify/json@2.2.342':
+    resolution: {integrity: sha512-ayuQgY+36XtS+y2NQtAozcOPGq4TzqENe3eTScSQ3l7rnF/4nT1W26Nl8JHfl2Ythwt5u1qknnL8cg/OL1xkJw==}
 
   '@iconify/types@2.0.0':
     resolution: { integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg== }
@@ -2728,6 +2734,9 @@ packages:
   pathe@0.2.0:
     resolution: { integrity: sha512-sTitTPYnn23esFR3RlqYBWn4c45WGeLcsKzQiUpXJAyfcWkolvlYpV8FLo7JishK946oQwMFUCHXQ9AjGPKExw== }
 
+  pathe@1.1.2:
+    resolution: {integrity: sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==}
+
   pathe@2.0.3:
     resolution: { integrity: sha512-WUjGcAqP1gQacoQe+OBJsFA7Ld4DyXuUIjZ5cc75cLHvJ7dtNsTugphxIADwspS+AraAUePCKrSVtPLFj/F88w== }
 
@@ -3974,6 +3983,11 @@ snapshots:
   '@iconify/iconify@3.1.1':
     dependencies:
       '@iconify/types': 2.0.0
+
+  '@iconify/json@2.2.342':
+    dependencies:
+      '@iconify/types': 2.0.0
+      pathe: 1.1.2
 
   '@iconify/types@2.0.0': {}
 
@@ -6284,6 +6298,8 @@ snapshots:
   path-type@4.0.0: {}
 
   pathe@0.2.0: {}
+
+  pathe@1.1.2: {}
 
   pathe@2.0.3: {}
 
