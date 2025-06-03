@@ -1,5 +1,5 @@
 import './assets/main.css';
-// import '@/design/index.less';
+import '@/design/index.less';
 import '@/design/windi-base.css';
 import 'virtual:windi-components.css';
 import 'virtual:windi-utilities.css';
