@@ -1,3 +1,6 @@
 import type { App } from 'vue';
 
-export function setupGlobDirectives(app: App) {}
+import { setupClickOutsideDirective } from './clickOutside';
+export function setupGlobDirectives(app: App) {
+  setupClickOutsideDirective(app);
+}
