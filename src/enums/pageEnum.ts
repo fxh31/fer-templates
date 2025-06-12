@@ -6,3 +6,5 @@ export enum PageEnum {
   // basic home path
   BASE_HOME = '/home',
 }
+
+export const PageWrapperFixedHeightKey = 'PageWrapperFixedHeight';

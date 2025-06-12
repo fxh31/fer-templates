@@ -46,5 +46,6 @@ export function generateModifyVars() {
     // ---
     'component-background': '#fff',
     'tree-node-selected-bg': '#fff',
+    'disabled-color': '#c9d1d9',
   };
 }
