@@ -31,7 +31,7 @@
   import { BasicTree, BasicLeftTree } from '@/components/Tree';
 
   import { CronInner, CronModal, FerCron } from '@/components/Fer/Cron';
-  import BasicDemo from '@/components/Table/demo/BasicTable.vue';
+  import BasicDemo from '@/components/Form/demo/BasicFormAndTable.vue';
   import BTest from '@/components/Table/demo/BTest.vue';
 
   import { FerAlert } from '@/components/Fer/Alert';
@@ -67,17 +67,7 @@
       fullName: 'bob1',
     },
   ]);
-  const formRef = ref();
-  const onSubmit = () => {
-    formRef.value
-      .validate()
-      .then(() => {
-        console.log(99);
-      })
-      .catch(error => {
-        console.log('error', error);
-      });
-  };
+
   const formState = reactive({
     name: '',
     name2: '',
@@ -90,52 +80,6 @@
   const initModal = data => {};
 
   const [registerModal, { setModalProps, closeModal, openModal }] = useModal(initModal);
-  const [registerForm, { setFieldsValue, validate, resetFields, updateSchema, setProps }] = useForm({
-    labelWidth: 120,
-    // baseColProps: { span: 6 },
-    compact: true,
-    // showActionButtonGroup: true,
-    // showSubmitButton: true,
-    // showAdvancedButton: true,
-    schemas: [
-      {
-        field: 'name',
-        label: '数据组名称',
-        component: 'Input',
-        // auth: '1,2',
-        componentProps: { placeholder: '请输入' },
-        rules: [{ required: true, trigger: 'blur', message: '必填' }],
-      },
-      {
-        field: 'code',
-        label: '数据组编号',
-        component: 'Input',
-        componentProps: { placeholder: '请输入' },
-        rules: [{ required: true, trigger: 'blur', message: '必填' }],
-      },
-      // {
-      //   component: 'Divider',
-      //   // componentProps: { content: '' },
-      // },
-      {
-        field: 'description',
-        label: '描述',
-        component: 'Textarea',
-        componentProps: { placeholder: '请输入', row: 3 },
-      },
-      {
-        field: 'description2',
-        // label: '描述d',
-        component: 'Checkbox',
-        componentProps: {
-          options: [
-            { fullName: 'Apple', id: 'Apple' },
-            { fullName: 'Pear', id: 'Pear' },
-          ],
-        },
-      },
-    ],
-  });
 
   const handleFormClick = () => {
     updateSchema([{ field: 'changeNmae', label: '修改表单配置', component: 'Input', componentProps: { options: [] } }]);
