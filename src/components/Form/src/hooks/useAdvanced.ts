@@ -1,3 +1,7 @@
+/**
+ * 控制表单的折叠，高级字段的显示
+ * Control the folding of forms and the display of advanced fields
+ */
 import type { ColEx } from '../types';
 import type { AdvanceState } from '../types/hooks';
 import type { ComputedRef, Ref } from 'vue';
@@ -61,7 +65,6 @@ export default function ({ advanceState, emit, getProps, getSchema, formModel, d
 
   function getAdvanced(itemCol: Partial<ColEx>, itemColSum = 0, isLastAction = false) {
     const width = unref(realWidthRef);
-
     const mdWidth =
       parseInt(itemCol.md as string) || parseInt(itemCol.xs as string) || parseInt(itemCol.sm as string) || (itemCol.span as number) || BASIC_COL_LEN;
 

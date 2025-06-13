@@ -1,3 +1,7 @@
+/**
+ * 处理表单的值，将其传给 useFormEvents 的 handleSubmit 事件
+ * Process the values of the form and pass them to the handleSubmit event of useFormEvents
+ */
 import type { Ref, ComputedRef } from 'vue';
 import type { FormProps, FormSchema } from '../types/form';
 

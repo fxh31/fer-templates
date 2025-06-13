@@ -1,3 +1,7 @@
+/**
+ * 配置表单事件
+ * Configure form events
+ */
 import type { ComputedRef, Ref } from 'vue';
 import type { FormProps, FormSchema, FormActionType } from '../types/form';
 import type { NamePath } from 'ant-design-vue/lib/form/interface';

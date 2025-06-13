@@ -39,7 +39,7 @@ export const basicProps = {
     default: () => ({ span: 24 }),
   },
   autoSetPlaceHolder: propTypes.bool.def(true),
-  // 在INPUT组件上单击回车时，是否自动提交
+  // 在 Input 组件上单击回车时，是否自动提交
   autoSubmitOnEnter: propTypes.bool.def(false),
   submitOnReset: propTypes.bool,
   submitOnChange: propTypes.bool,

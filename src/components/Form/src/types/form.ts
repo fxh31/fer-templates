@@ -3,7 +3,7 @@ import type { VNode, CSSProperties } from 'vue';
 import type { ButtonProps as AntdButtonProps } from '@/components/Button';
 import type { FormItem } from './formItem';
 import type { ColEx, ComponentType } from './index';
-// import type { TableActionType } from '@/components/Table/src/types/table';
+import type { TableActionType } from '@/components/Table/src/types/table';
 import type { RowProps } from 'ant-design-vue/lib/grid/Row';
 
 export type FieldMapToTime = [string, [string, string], (string | [string, string])?][];
@@ -145,7 +145,7 @@ export interface FormSchema {
   // render component
   component: ComponentType;
   // Component parameters
-  // componentProps?: ((opt: { schema: FormSchema; tableAction: TableActionType; formActionType: FormActionType; formModel: Recordable }) => Recordable) | object;
+  componentProps?: ((opt: { schema: FormSchema; tableAction: TableActionType; formActionType: FormActionType; formModel: Recordable }) => Recordable) | object;
   // Required
   required?: boolean | ((renderCallbackParams: RenderCallbackParams) => boolean);
 

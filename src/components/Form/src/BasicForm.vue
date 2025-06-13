@@ -5,6 +5,7 @@
       <template v-for="schema in getSchema" :key="schema.field">
         <FormItem
           :isAdvanced="fieldsIsAdvancedMap[schema.field]"
+          :tableAction="tableAction"
           :formActionType="formActionType"
           :schema="schema"
           :formProps="getProps"

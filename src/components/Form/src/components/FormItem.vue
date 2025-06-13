@@ -2,7 +2,7 @@
   import type { PropType, Ref } from 'vue';
   import type { Rule } from 'ant-design-vue/es/Form';
   import type { FormActionType, FormProps, FormSchema } from '../types/form';
-  // import type { TableActionType } from '@/components/Table';
+  import type { TableActionType } from '@/components/Table';
 
   import { computed, defineComponent, toRefs, unref } from 'vue';
   import { cloneDeep, upperFirst } from 'lodash-es';
@@ -41,9 +41,9 @@
         type: Function as PropType<(key: string, value: any, schema: FormSchema) => void>,
         default: null,
       },
-      // tableAction: {
-      //   type: Object as PropType<TableActionType>,
-      // },
+      tableAction: {
+        type: Object as PropType<TableActionType>,
+      },
       formActionType: {
         type: Object as PropType<FormActionType>,
       },
@@ -215,6 +215,7 @@
         return rules;
       }
 
+      // 根据 component 字符串 去 commponentMap 里找对应组件
       function renderComponent() {
         const { renderComponentContent, component, field, changeEvent = 'change', valueField } = props.schema;
 

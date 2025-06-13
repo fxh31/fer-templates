@@ -49,8 +49,10 @@ export function registerGlobComp(app: App) {
     .use(Row)
     .use(Col)
     .use(Tabs)
+    .use(Card)
     .use(Divider)
     .use(Select)
+    .use(Tag)
     .use(AutoComplete)
     .use(Switch)
     .use(FerEmpty);
