@@ -2,7 +2,7 @@ import type { Component } from 'vue';
 import { Input, Select, Checkbox, InputNumber, Switch, DatePicker, TimePicker, AutoComplete } from 'ant-design-vue';
 import type { ComponentType } from './types/componentType';
 
-const componentMap = new Map<ComponentType, Component>();
+const componentMap = new Map<ComponentType, Component>(); // 为渲染可编辑行内的组件样式
 
 componentMap.set('Input', Input);
 componentMap.set('InputNumber', InputNumber);
