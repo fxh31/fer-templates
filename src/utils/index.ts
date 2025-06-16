@@ -96,3 +96,17 @@ export const withInstall = <T extends CustomComponent>(component: T, alias?: str
 export function getPopupContainer(node?: HTMLElement): HTMLElement {
   return (node?.parentNode as HTMLElement) ?? document.body;
 }
+
+/**
+ * 配置打开一个新的浏览器窗口（或标签页）
+ * Configure to open a new browser window (or tab)
+ */
+export function openWindow(url: string, opt?: { target?: TargetContext | string; noopener?: boolean; noreferrer?: boolean }) {
+  const { target = '_blank', noopener = true, noreferrer = true } = opt || {};
+  const feature: string[] = [];
+
+  noopener && feature.push('noopener=yes'); // 是否允许新页面通过 openr 访问原页面
+  noreferrer && feature.push('noreferrer=yes'); // 防止发送 HTTP Referer 头
+
+  window.open(url, target, feature.join(','));
+}
