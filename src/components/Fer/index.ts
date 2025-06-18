@@ -10,6 +10,7 @@ import { FerCron } from './Cron';
 import { FerEmpty } from './Empty';
 import { FerSelect } from './Select';
 import { FerRadio } from './Radio';
+import { FerNumberRange } from './NumberRange';
 
 const FerInputPassword = Input.Password;
 FerInputPassword.name = 'FerInputPassword';
@@ -42,4 +43,5 @@ export {
   FerEmpty,
   FerSelect,
   FerRadio,
+  FerNumberRange,
 };
