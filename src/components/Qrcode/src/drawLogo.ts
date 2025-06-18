@@ -46,11 +46,11 @@ export const drawLogo = ({ canvas, logo }: RenderQrCodeParams) => {
   // logo
   const image = new Image();
   if (crossOrigin || logoRadius) {
-    image.setAttribute('crossOrigin', crossOrigin || 'anonymous');
+    image.setAttribute('crossOrigin', crossOrigin || 'anonymous'); // 跨域配置
   }
   image.src = logoSrc;
 
-  // 使用image绘制可以避免某些跨域情况
+  // 使用image绘制可以避免某些跨域情况（但是是canvas的功能更为强大）
   const drawLogoWithImage = (image: CanvasImageSource) => {
     ctx.drawImage(image, logoXY, logoXY, logoWidth, logoWidth);
   };

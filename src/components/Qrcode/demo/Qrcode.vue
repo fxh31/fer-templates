@@ -14,7 +14,11 @@
       },
     },
     width: 300,
-    logo: 'https://www.ferhannah.cn/static/img/logo.png',
+    // logo: 'https://www.ferhannah.cn/static/img/logo.png',
+    logo: {
+      src: 'https://www.ferhannah.cn/static/img/logo.png',
+      // crossOrigin: 'use-credentials',
+    },
     tag: 'canvas',
   };
   function loadDone(res) {

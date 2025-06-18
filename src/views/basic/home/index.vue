@@ -16,7 +16,7 @@
     <!-- <div v-click-outside="handleClickOutside" style="width: 100px; height: 100px; background-color: yellowgreen" :value="testValue">{{ testValue }}</div> -->
     <!-- <div style="width: 100px; height: 100px; background-color: yellow" :value="testValue">{{ testValue }}</div> -->
     <!-- <span class="bpmn ad-hoc-marke"></span> -->
-    <BasicDemo />
+    <QrTest />
   </main>
 </template>
 <script setup lang="ts">
@@ -32,16 +32,18 @@
 
   import { CronInner, CronModal, FerCron } from '@/components/Fer/Cron';
   import BasicDemo from '@/components/Form/demo/BasicFormAndTable.vue';
-  import BTest from '@/components/Table/demo/BTest.vue';
+  import QrTest from '@/components/Qrcode/demo/Qrcode.vue';
 
   import { FerAlert } from '@/components/Fer/Alert';
   import { promoteRouteLevel } from '@/router/helper/routeHelper';
+  import { dataURLtoBlob, urlToBase64 } from '@/utils/file/base64Convert';
 
   function renderView() {
     testGet().then(res => {
       console.log(res);
     });
   }
+
   const testValue = ref('');
   const testTable = ref('');
   const rules = {
