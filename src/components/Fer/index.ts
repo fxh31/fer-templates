@@ -9,6 +9,7 @@ import { FerCheckbox, FerCheckboxSingle } from './Checkbox';
 import { FerCron } from './Cron';
 import { FerEmpty } from './Empty';
 import { FerSelect } from './Select';
+import { FerRadio } from './Radio';
 
 const FerInputPassword = Input.Password;
 FerInputPassword.name = 'FerInputPassword';
@@ -40,4 +41,5 @@ export {
   FerWeekPicker,
   FerEmpty,
   FerSelect,
+  FerRadio,
 };
