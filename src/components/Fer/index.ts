@@ -11,6 +11,7 @@ import { FerEmpty } from './Empty';
 import { FerSelect } from './Select';
 import { FerRadio } from './Radio';
 import { FerNumberRange } from './NumberRange';
+import { FerInputNumber } from './InputNumber';
 
 const FerInputPassword = Input.Password;
 FerInputPassword.name = 'FerInputPassword';
@@ -44,4 +45,5 @@ export {
   FerSelect,
   FerRadio,
   FerNumberRange,
+  FerInputNumber,
 };
