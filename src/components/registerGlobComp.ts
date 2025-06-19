@@ -55,5 +55,6 @@ export function registerGlobComp(app: App) {
     .use(Tag)
     .use(AutoComplete)
     .use(Switch)
+    .use(Popover)
     .use(FerEmpty);
 }
