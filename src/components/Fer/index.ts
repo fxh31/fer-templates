@@ -14,6 +14,7 @@ import { FerNumberRange } from './NumberRange';
 import { FerInputNumber } from './InputNumber';
 import { FerSwitch } from './Switch';
 import { FerColorPicker } from './ColorPicker';
+import { FerCascader } from './Cascader';
 
 const FerInputPassword = Input.Password;
 FerInputPassword.name = 'FerInputPassword';
@@ -50,4 +51,5 @@ export {
   FerInputNumber,
   FerSwitch,
   FerColorPicker,
+  FerCascader,
 };
