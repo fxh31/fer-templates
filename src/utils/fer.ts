@@ -61,6 +61,14 @@ export function thousandsFormat(num) {
   numArr[0] = numArr[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   return numArr.join('.');
 }
+export function getDateTimeUnit(format) {
+  if (format == 'YYYY' || format == 'yyyy') return 'year';
+  if (format == 'YYYY-MM' || format == 'yyyy-MM') return 'month';
+  if (format == 'YYYY-MM-DD' || format == 'yyyy-MM-dd') return 'day';
+  if (format == 'YYYY-MM-DD HH:mm' || format == 'yyyy-MM-dd HH:mm') return 'minute';
+  if (format == 'YYYY-MM-DD HH:mm:ss' || format == 'yyyy-MM-dd HH:mm:ss') return 'second';
+  return 'day';
+}
 
 export function getDateFormat(format) {
   if (!format) return 'YYYY-MM-DD HH:mm:ss';
