@@ -44,7 +44,7 @@
 
       let realHeight = 0;
 
-      const { stop: stopWindowSize } = useWindowSizeFn(setModalHeight.bind(null));
+      const [_, stopWindowSize] = useWindowSizeFn(setModalHeight.bind(null));
 
       const { stop } = useMutationObserver(
         spinRef,
