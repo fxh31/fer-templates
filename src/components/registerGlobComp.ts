@@ -36,7 +36,8 @@ import {
   Upload,
 } from 'ant-design-vue';
 
-import { FerEmpty } from './Fer';
+import { BasicHelp } from '@/components/Basic';
+import { FerEmpty, FerTextarea, FerInput, FerSelect, FerI18nInput } from './Fer';
 
 export function registerGlobComp(app: App) {
   app
@@ -56,5 +57,12 @@ export function registerGlobComp(app: App) {
     .use(AutoComplete)
     .use(Switch)
     .use(Popover)
-    .use(FerEmpty);
+    .use(Collapse)
+    .use(BasicHelp)
+    .use(Popconfirm)
+    .use(FerEmpty)
+    .use(FerInput)
+    .use(FerSelect)
+    .use(FerTextarea)
+    .use(FerI18nInput);
 }

@@ -2,7 +2,7 @@ import { Input, DatePicker } from 'ant-design-vue';
 
 // fer 组件（用于二次封装 Form 组件）
 import { BasicCaption } from '@/components/Basic';
-import { FerInput, FerTextarea } from './Input';
+import { FerInput, FerTextarea, FerI18nInput } from './Input';
 import { FerAlert } from './Alert';
 import { FerDivider } from './Divider';
 import { FerCheckbox, FerCheckboxSingle } from './Checkbox';
@@ -36,6 +36,7 @@ export {
   FerAlert,
   FerInput,
   FerTextarea,
+  FerI18nInput,
   FerDivider,
   FerCheckbox,
   FerCheckboxSingle,
