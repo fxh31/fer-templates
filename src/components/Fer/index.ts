@@ -14,6 +14,7 @@ import { FerNumberRange } from './NumberRange';
 import { FerInputNumber } from './InputNumber';
 import { FerSwitch } from './Switch';
 import { FerColorPicker } from './ColorPicker';
+import { FerIconPicker } from './IconPicker';
 import { FerCascader } from './Cascader';
 import { FerTreeSelect } from './TreeSelect';
 import { FerDatePicker, FerTimePicker, FerDateRange, FerTimeRange } from './DatePicker';
@@ -46,6 +47,7 @@ export {
   FerInputSearch,
   FerGroupTitle,
   FerMonthPicker,
+  FerIconPicker,
   FerWeekPicker,
   FerEmpty,
   FerSelect,
