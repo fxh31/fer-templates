@@ -40,6 +40,7 @@ export function generateModifyVars() {
     'text-color-secondary': 'rgba(0, 0, 0, 0.45)',
     'text-color': '#c9d1d9', // todo: fix text-color
     'border-color-base': '#f0f0f0',
+    'border-color-base1': '#f0f0f0',
     'app-content-background': '#F1F4F8', //   Link color
     'app-main-background': '#ebeef5',
     'selected-hover-bg': '#f5f5f5',
