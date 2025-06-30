@@ -7,7 +7,7 @@ import type { LocaleType } from '#/config';
 import { unref, computed } from 'vue';
 import { i18n } from './setupI18n';
 import { loadLocalePool, setHtmlPageLang } from './helper';
-import { useLocaleStore } from '@/store/modules/locale';
+import { useLocaleStore } from '@/stores/modules/locale';
 import { localeSetting } from '@/settings/localeSetting';
 
 interface LangModule {
