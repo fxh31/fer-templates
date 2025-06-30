@@ -1,3 +1,27 @@
+import type { UserInfo } from '#/stores';
+
+import { defHttp } from '@/utils/http/axios';
+import { getToken } from '@/utils/auth';
+import { useUserStore } from '@/stores/modules/user';
+import { isString, isNumber } from '@/utils/is';
+import { useMessage } from '@/hooks/web/useMessage';
+import { router } from '@/router';
+
+interface OnlineUserInfo extends UserInfo {
+  token?: string;
+}
+
+export function getScriptFunc(str) {
+  let func = null;
+  try {
+    func = eval(str);
+    if (Object.prototype.toString.call(func) !== '[object Function]') return false;
+    return func;
+  } catch (_) {
+    return false;
+  }
+}
+
 /**
  * 将数字金额转换为中文大写金额（适用于财务、发票等正式场景）
  * Convert digital amounts to capitalized Chinese amounts (applicable to formal scenarios such as finance and invoices)
@@ -69,7 +93,16 @@ export function getDateTimeUnit(format) {
   if (format == 'YYYY-MM-DD HH:mm:ss' || format == 'yyyy-MM-dd HH:mm:ss') return 'second';
   return 'day';
 }
-
+// 动态表单判断时间
+export function getTimeUnit(key) {
+  if (key == 1) return 'year';
+  if (key == 2) return 'month';
+  if (key == 3) return 'day';
+  if (key == 4) return 'hour';
+  if (key == 5) return 'minute';
+  if (key == 6) return 'second';
+  return 'day';
+}
 export function getDateFormat(format) {
   if (!format) return 'YYYY-MM-DD HH:mm:ss';
   const formatObj = {
@@ -94,4 +127,47 @@ export function getferfAppId() {
     appId = list[1];
   }
   return appId;
+}
+
+export const onlineUtils = {
+  // 获取用户信息
+  getUserInfo() {
+    const userStore = useUserStore();
+    const userInfo: OnlineUserInfo = userStore.getUserInfo;
+    userInfo.token = getToken() as string;
+    return userInfo;
+  },
+  // 获取设备信息
+  getDeviceInfo() {
+    const deviceInfo = { vueVersion: '3', origin: 'pc' };
+    return deviceInfo;
+  },
+  // 请求
+  request(url: string, method: string, data = {}, headers = {}) {
+    return defHttp[method ? method.toLowerCase() : 'get']({ url, data, headers });
+  },
+  // 路由跳转
+  route(url: string) {
+    if (!url) return;
+    router.push(url);
+  },
+  // 消息提示
+  toast(message: string | number, type: string = 'info', duration: number = 3000) {
+    const { createMessage } = useMessage();
+    if (!isString(message) && !isNumber(message)) return;
+    const newDuration = duration / 1000;
+    const config = { content: message, type, duration: newDuration };
+    createMessage[type] && createMessage[type](config);
+  },
+};
+export function getParamList(templateJson, data?) {
+  if (!templateJson?.length) return [];
+  for (let i = 0; i < templateJson.length; i++) {
+    const e = templateJson[i];
+    if (e.sourceType == 1 && data) {
+      e.defaultValue = data[e.relationField] || data[e.relationField] == 0 || data[e.relationField] == false ? data[e.relationField] : '';
+    }
+    if (e.sourceType == 4 && e.relationField == '@formId') e.defaultValue = data.id || '';
+  }
+  return templateJson;
 }

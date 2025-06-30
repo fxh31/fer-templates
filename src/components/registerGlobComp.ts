@@ -37,12 +37,14 @@ import {
 } from 'ant-design-vue';
 
 import { BasicHelp } from '@/components/Basic';
-import { FerEmpty, FerTextarea, FerInput, FerSelect, FerI18nInput } from './Fer';
+import { FerEmpty, FerTextarea, FerInput, FerSelect, FerI18nInput, FerIconPicker, FerCheckbox, FerRadio, FerTreeSelect } from './Fer';
 
 export function registerGlobComp(app: App) {
   app
     .use(Input)
+    .use(InputNumber)
     .use(Form)
+    .use(Dropdown)
     .use(Button)
     .use(Tooltip)
     .use(Radio)
@@ -60,9 +62,16 @@ export function registerGlobComp(app: App) {
     .use(Collapse)
     .use(BasicHelp)
     .use(Popconfirm)
+    .use(Table)
+    .use(Menu)
+    .use(Slider)
     .use(FerEmpty)
     .use(FerInput)
     .use(FerSelect)
     .use(FerTextarea)
-    .use(FerI18nInput);
+    .use(FerI18nInput)
+    .use(FerIconPicker)
+    .use(FerCheckbox)
+    .use(FerRadio)
+    .use(FerTreeSelect);
 }

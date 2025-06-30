@@ -10,13 +10,12 @@
     <FerCron v-model:value="stateCron.value"> </FerCron> -->
     <!-- <FerAlert title="测试" type="warning" /> -->
 
-    <!-- <BasicTree :treeData="treeData" defaultExpandAll title="88" search /> -->
-    <!-- <BasicLeftTree :treeData="treeData" defaultExpandAll title="88sss" search /> -->
-
     <!-- <div v-click-outside="handleClickOutside" style="width: 100px; height: 100px; background-color: yellowgreen" :value="testValue">{{ testValue }}</div> -->
     <!-- <div style="width: 100px; height: 100px; background-color: yellow" :value="testValue">{{ testValue }}</div> -->
-    <!-- <span class="bpmn ad-hoc-marke"></span> -->
-    <QrTest />
+    <BasicFormGenerator />
+    <!-- <BasicTree /> -->
+
+    <!-- <DraggableTest /> -->
   </main>
 </template>
 <script setup lang="ts">
@@ -28,13 +27,11 @@
   import { BasicForm, useForm } from '@/components/Form';
   import { IconPicker } from '@/components/Icon';
 
-  import { BasicTree, BasicLeftTree } from '@/components/Tree';
-
   import { CronInner, CronModal, FerCron } from '@/components/Fer/Cron';
   import BasicDemo from '@/components/Form/demo/BasicFormAndTable.vue';
-  import QrTest from '@/components/Qrcode/demo/Qrcode.vue';
+  import BasicTree from '@/components/Tree/demo/BasicTree.vue';
+  import BasicFormGenerator from '@/components/FormGenerator/demo/BasicFormGenerator.vue';
 
-  import { FerAlert } from '@/components/Fer/Alert';
   import { promoteRouteLevel } from '@/router/helper/routeHelper';
   import { dataURLtoBlob, urlToBase64 } from '@/utils/file/base64Convert';
 
@@ -52,23 +49,6 @@
       { min: 3, max: 5, message: 'Length should be 3 to 5', trigger: 'blur' },
     ],
   };
-  const treeData = ref([
-    {
-      id: 1,
-      fullName: 'test',
-
-      children: [
-        {
-          id: 2,
-          fullName: 'test2',
-        },
-      ],
-    },
-    {
-      id: 3,
-      fullName: 'bob1',
-    },
-  ]);
 
   const formState = reactive({
     name: '',
